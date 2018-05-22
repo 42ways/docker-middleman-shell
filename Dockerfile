@@ -32,7 +32,6 @@ WORKDIR /middleman
 
 # CMD [ "irb" ]
 
-RUN mkdir /middleman
 RUN gem install middleman
 RUN gem install bootstrap
 
