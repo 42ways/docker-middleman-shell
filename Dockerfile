@@ -4,8 +4,10 @@
 FROM ubuntu:18.04
 MAINTAINER Thomas Herrmann <mail@thoherr.de>
 
+ENV DEBIAN_FRONTEND noniteractive
+
 RUN apt-get update \
-        && apt-get install -y curl git ca-certificates ruby ruby-dev build-essential netcat-openbsd \
+        && apt-get install -y curl git ca-certificates ruby ruby-dev build-essential netcat-openbsd tzdata \
         && rm -rf /var/lib/apt/lists/*
 
 # install things globally, for great justice
@@ -27,7 +29,7 @@ RUN mkdir /middleman
 RUN gem install middleman
 
 # RUN locale-gen de_DE.UTF-8
-# ENV LC_CTYPE de_DE.UTF-8
+ENV LC_CTYPE de_DE.UTF-8
 
 WORKDIR /middleman
 
