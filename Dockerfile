@@ -25,18 +25,14 @@ RUN gem install bundler \
 # don't create ".bundle" in all our apps
 ENV BUNDLE_APP_CONFIG $GEM_HOME
 
-RUN mkdir /middleman
-RUN gem install middleman
-
 # RUN locale-gen de_DE.UTF-8
 ENV LC_CTYPE de_DE.UTF-8
 
 WORKDIR /middleman
 
-
 # CMD [ "irb" ]
 
-
-# ENV BASEDIR /rails
-
+RUN mkdir /middleman
+RUN gem install middleman
+RUN gem install bootstrap
 
