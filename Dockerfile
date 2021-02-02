@@ -1,13 +1,13 @@
 # Dockerfile for middlemanapp toolset (website development)
-# based on Ubuntu 18 with bundled ruby (2.3.1)
+# based on Ubuntu 20 with bundled ruby (2.7.0)
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Thomas Herrmann <mail@thoherr.de>
 
 ENV DEBIAN_FRONTEND noniteractive
 
 RUN apt-get update \
-        && apt-get install -y curl git ca-certificates ruby ruby-dev build-essential netcat-openbsd tzdata \
+        && apt-get install -y curl git ca-certificates ruby ruby-dev build-essential netcat-openbsd tzdata nodejs vim \
         && rm -rf /var/lib/apt/lists/*
 
 # install things globally, for great justice
