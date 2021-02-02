@@ -42,7 +42,8 @@ pipeline {
         stage("Push container") {
             steps {
                 script {
-                    docker.withRegistry("${DOCKER_REGISTRY_URL}") {
+                    // docker.withRegistry("${DOCKER_REGISTRY_URL}") {
+                    docker.withRegistry("http://docker-reg-muc.teleteach.de:5000") {
                         dockerImage.push()
                     }
                 }
