@@ -7,7 +7,8 @@ MAINTAINER Thomas Herrmann <mail@thoherr.de>
 ENV DEBIAN_FRONTEND noniteractive
 
 RUN apt-get update \
-        && apt-get install -y curl git ca-certificates ruby ruby-dev build-essential netcat-openbsd tzdata nodejs vim \
+        && apt-get install -y curl git ca-certificates ruby ruby-dev python3 build-essential \
+                              netcat-openbsd tzdata nodejs vim \
         && rm -rf /var/lib/apt/lists/*
 
 # install things globally, for great justice
