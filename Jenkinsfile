@@ -16,6 +16,8 @@ pipeline {
 
     agent any
 
+    options { disableConcurrentBuilds() }
+
     environment {
         DOCKER_REGISTRY_URL = credentials("DOCKER_REGISTRY_URL")
     }

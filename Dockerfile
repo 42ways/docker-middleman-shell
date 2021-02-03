@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noniteractive
 
 RUN apt-get update \
         && apt-get install -y curl git ca-certificates ruby ruby-dev python3 build-essential \
-                              netcat-openbsd tzdata nodejs vim \
+                              netcat-openbsd tzdata nodejs npm vim \
         && rm -rf /var/lib/apt/lists/*
 
 # install things globally, for great justice

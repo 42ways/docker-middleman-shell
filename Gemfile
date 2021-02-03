@@ -12,8 +12,7 @@ gem "kramdown"
 # pygments.rb is used by the file syntax helpers
 gem "pygments.rb"
 
-gem "builder", "~> 3.0.0"
-gem "zurb-foundation" , '~> 4.2.2', require: false
+gem "builder"
 gem "forgery"
 gem "sitemap_generator"
 gem "tzinfo"
