@@ -28,10 +28,10 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 # RUN locale-gen de_DE.UTF-8
 ENV LC_CTYPE de_DE.UTF-8
 
+COPY Gemfile .
+RUN bundle install
+
+VOLUME /middleman
 WORKDIR /middleman
 
-# CMD [ "irb" ]
-
-RUN gem install middleman
-RUN gem install bootstrap
-
+CMD [ "/bin/bash", "-l" ]
