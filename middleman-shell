@@ -1,1 +1,1 @@
-docker run --rm -it -v $(pwd):/middleman middleman-shell
+docker run --rm -it -v $(pwd):/middleman -p 4567:4567 middleman-shell
