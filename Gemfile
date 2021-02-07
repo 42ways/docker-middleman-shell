@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-gem "middleman"
+
+gem 'middleman'
+gem 'middleman-autoprefixer'
 gem "middleman-blog"
 gem "middleman-syntax"
 gem "middleman-favicon-maker"
-gem "middleman-sprockets"
+gem 'middleman-s3_sync'
+gem "middleman-livereload"
 
 # gem "redcarpet"
 # the syntax highlighter we use requires redcarpet???
@@ -14,7 +17,5 @@ gem "pygments.rb"
 
 gem "builder"
 gem "forgery"
-gem "sitemap_generator"
 gem "tzinfo"
 gem "nokogiri"
-gem 'middleman-s3_sync'
